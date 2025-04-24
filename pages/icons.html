@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb | Holiday rentals, cabins, beach houses & more</title>
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/dscfaxplh/image/upload/v1739788305/Airbnb/Airbnb%20logo/xyxrug5kbnw9bh36uhgv.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="logo mt-2 img-fluid d-none d-lg-block offset-2"
+                    src="https://res.cloudinary.com/dscfaxplh/image/upload/v1739789252/Airbnb/Airbnb%20logo/rngyonuu97ljzpfw4maa.jpg"
+                    alt="">
+                <img class="logoi mt-3 img-fluid d-lg-none d-md-block d-sm-block"
+                    src="https://res.cloudinary.com/dscfaxplh/image/upload/v1739868536/Airbnb/Airbnb%20logo/hzaqvukupaqac7n3roku.webp"
+                    alt="">
+            </div>
+            <div class="col-md-5">
+                <div class="col-md-7 position-absolute d-flex justify-content-start  offset-1  ">
+                    <div>
+                        <button class="btn btn-link text-dark  me-2 text-decoration-none fs-5 mt-3 g-0 fs--6 "
+                            id="homes-btn">Homes</button>
+                        <button class="btn btn-link text-dark  text-decoration-none fs-5 mt-3 g-0 fs--6"
+                            id="experiences-btn">Experiences</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex flex-container">
+                <h6 class=" text-dark py-2 px-3 rounded-pill d-inline-block hover-effect position-absolute  fs-6"
+                    style="top: 3%;">Airbnb your home</h6>
+                <h6 class="text-dark py-1 px-3 rounded-pill d-inline-block hover-effect  position-absolute fs-6"
+                    style="right: 10%; top: 3.7%;"><i class="fa-solid fa-globe "></i></h6>
+                <button
+                    class="btn btn-light rounded-pill px-1.5 py-2 d-flex align-items-center gap-2 dropdown-toggle position-absolute"
+                    style="right: 5%; top: 2.8%;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars fs-6" style="color: #6A6A6A;"></i>
+                    <i class="fa-solid fa-user-circle fs-4" style="color: #6A6A6A;"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"> Sign up </a></li>
+                    <li><a class="dropdown-item" href="#"> Login</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#">Airbnb your home</a></li>
+                    <li><a class="dropdown-item" href="#">Host an experience</a></li>
+                    <li><a class="dropdown-item" href="#"> Help center</a></li>
+                </ul>
+
+            </div>
+        </div>
+        </div>
+    </nav>
+
+</header>
+
+    
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+            <button id="scroll-left" class="scroll-button ">
+                <i class="fas fa-chevron-left small-ic"></i>
+            </button>
+            <div class="col-md-7 ms-5">
+                <div class="d-flex flex-nowrap overflow-auto category-container offset-2" id="category-scroll">
+                    <a href="../index.html" class="category-item " >
+                        <i class="fas fa-space-shuttle"></i> OMG!
+                    </a>
+                    <a href="../pages/icons.html" class="category-item" >
+                        <i class="fas fa-ticket-alt"></i> Icons
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-water"></i> Lakefront
+                    </a>
+                    <a href="" class="category-item" >
+                        <i class="fas fa-home"></i> Cabins
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-tree"></i> Treehouses
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-mountain"></i> Caves
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-eye"></i> Amazing Views
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-tractor"></i> Farms
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-swimmer"></i> Amazing Pools
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-umbrella-beach"></i> Beachfront
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-tree"></i> Treehouses
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-mountain"></i> Caves
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-eye"></i> Amazing Views
+                    </a>
+                </div>
+                <button id="scroll-right" class="scroll-button right-arrow">
+                    <i class="fas fa-chevron-right small-ic"></i>
+                </button>
+            </div>
+
+
+            <div class="col-md-4 d-flex justify-content-end">
+
+                <!-- Filter & Toggle -->
+                <div class="d-flex align-items-center gap-3">
+                    <button class="filter-btn d-flex align-items-center">
+                        <i class="fas fa-sliders-h me-2"></i> Filters
+                    </button>
+                    <div class="toggle-switch d-flex rounded-3 px-3 py-2 align-items-center">
+                        Display total before taxes
+                        <div class="form-check form-switch ms-2">
+                            <input class="form-check-input" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+            <div class="container mt-4">
+                <div class="row g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div id="carousel0" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI3NzUzNjI3NDk4NTUzNDU4OQ%3D%3D/original/caac5c92-37ed-4353-9fd1-d9dfab7273b8.jpeg?im_w=1440&im_q=highq"
+                                            class="d-block w-100" alt="Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI3NzUzNjI3NDk4NTUzNDU4OQ%3D%3D/original/df96b432-413e-46e9-b9cc-8b25e4b6bef5.jpeg?im_w=1200"
+                                            class="d-block w-100" alt="Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI3NzUzNjI3NDk4NTUzNDU4OQ%3D%3D/original/4af8088c-7521-49a5-a497-b395fef4c090.jpeg?im_w=1200"
+                                            class="d-block w-100" alt="Image 3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel0"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon small-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel0"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon small-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="fw-bold">Train for Gladiator || glory</h5>
+                                <p class="text-muted">Hosted by Lucius</p>
+                                <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before taxes</span></p>
+                            </div>
+                        </div>
+                    </div>
+    
+           
+    
+    
+            <h1>Past experiences</h1>
+    
+                    <div class="container mt-4" >
+                        <div class="row g-4" >
+                            <!-- Card 1 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel1" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/a766e0e9-1e6f-4b88-b8d5-ce12375c6de8.png?im_w=1440&im_q=highq" class="d-block w-100" alt="Image 1">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/34eac43e-9e92-4aaf-97d4-eea9f1d53a88.png?im_w=720" class="d-block w-100" alt="Image 2">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/5f4385fd-1191-4203-8111-450eb4382fa6.png?im_w=1200"
+                                                    class="d-block w-100" alt="Image 3">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Stay in Prince's Purple Rain house</h5>
+                                        <p class="text-muted">Hosted by Wendy And Lisa </p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 2 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel2" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzY4MTU2OTMzMjYwMTQ5OQ%3D%3D/original/7fe72e51-f9b5-4702-b71c-4b6c2134507b.jpeg?im_w=1440&im_q=highq" class="d-block w-100" alt="Image 1">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzY4MTU2OTMzMjYwMTQ5OQ%3D%3D/original/f6767f06-a134-4b21-9c13-3cc5b1681d3d.jpeg?im_w=1200" class="d-block w-100" alt="Image 2">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzY4MTU2OTMzMjYwMTQ5OQ%3D%3D/original/1bd26972-9faa-4f2b-90b6-993a52e6b0f0.jpeg?im_w=1200"
+                                                    class="d-block w-100" alt="Image 3">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Haunt the Beetlejuice house</h5>
+                                        <p class="text-muted">Hosted by Delia Deetz</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 3 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel3" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjMyMzc5Mzc2MTc3OTEzMg%3D%3D/original/8a39953f-f158-4cc2-a112-aa4079e0fca8.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 7">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjMyMzc5Mzc2MTc3OTEzMg%3D%3D/original/36789d8e-f28a-44ed-8a2c-3e69f2ad6769.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjMyMzc5Mzc2MTc3OTEzMg%3D%3D/original/749262fe-943e-4135-8c9a-bb0e608a83c5.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Join the Living Room Session with Doja Cat</h5>
+                                        <p class="text-muted">Hosted by Doja Cat</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 4 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel4" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjIzMTk3NDU3MjE4Nzg2NA%3D%3D/original/f4cbe542-3ce0-4c6f-a8f1-d2120c1b2420.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 4">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjIzMTk3NDU3MjE4Nzg2NA%3D%3D/original/0dc93cbc-8753-426d-b48d-6ae45bb1e3fd.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjIzMTk3NDU3MjE4Nzg2NA%3D%3D/original/0a980b27-6c74-4beb-9026-40f2836f9b87.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel4"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel4"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Train at the X-MAnsion</h5>
+                                        <p class="text-muted">Hosted by Jubliee</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+    
+    
+                    <div class="container mt-4">
+                        <div class="row g-4">
+                            <!-- Card 5 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel5" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/1077cfcd-29d5-42b7-adab-19e0b620e492.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 1">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/6e1d5cfb-d54e-481c-99af-6d9ec8070a2c.jpeg?im_w=480&im_q=highq" class="d-block w-100" alt="Image 2">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/cc8db640-21c8-41a9-8af1-7ede1eb456ee.jpeg?im_w=480&im_q=highq"
+                                                    class="d-block w-100" alt="Image 3">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel5"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel5"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Go VIP with Kevin Hart</h5>
+                                        <p class="text-muted">Hosted by Polly Pocket </p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 6 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel6" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/ae3426d1-fba4-44d4-bed2-690426f25f7a.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 4">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/04966b4d-fe31-4bc0-b1ca-2df033d1527a.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/bf7a757d-9352-4b37-a8c2-9656427bc7fb.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel6"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel6"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Open the Olympic Games </h5>
+                                        <p class="text-muted">Hosted by Mathieu Lehanneur</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 7 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel7" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/bd73f0f8-9057-4bbc-ad70-1db13eb5c03f.png?im_w=960&im_q=highq" class="d-block w-100" alt="Image 7">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/ee71281a-74af-4200-882a-53c2c8d96a42.jpeg?im_w=480&im_q=highq"
+                                                    class="d-block w-100" alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/44b9a499-bb02-4048-8748-23104627d664.jpeg?im_w=720"
+                                                    class="d-block w-100" alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel7"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel7"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Wake up in the Musée d’Orsay</h5>
+                                        <p class="text-muted">Hosted by Mathieu Lehanneur </p>
+                                        <p class="fw-bold">Sold out<span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 8 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel8" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/ced15ffe-0ab5-48cf-a189-dbdeaaf04387.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 10">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/0caa1462-bd5f-4cfa-8f9d-7012f7eb7d02.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/dcb25748-642f-4314-9815-acaba652ca1e.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/d25d568a-7cd3-460b-accc-94c6d71ccbde.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel8"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel8"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Make core memories with Inside Out 2</h5>
+                                        <p class="text-muted">Hosted by Joy</p>
+                                        <p class="fw-bold">Sold out<span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+    
+    
+                    <div class="container mt-4">
+                        <div class="row g-4">
+                            <!-- Card 9 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel9" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE0ODQ2MDI1NTE4MDMzOTQ4MQ%3D%3D/original/c92634d0-4964-439a-905d-b9129af14d34.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 1">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE0ODQ2MDI1NTE4MDMzOTQ4MQ%3D%3D/original/b4348974-568a-4623-9d8b-0890067e5e34.jpeg?im_w=480&im_q=highq" class="d-block w-100" alt="Image 2">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE0ODQ2MDI1NTE4MDMzOTQ4MQ%3D%3D/original/82a3d8ea-c9f1-4a2f-975e-7006723db174.png?im_w=480&im_q=highq"
+                                                    class="d-block w-100" alt="Image 3">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel9"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel9"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Design your Incredibles Supersuit</h5>
+                                        <p class="text-muted">Hosted by Edna Mode</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 10 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel10" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjI0NzUwMDUwMTg2Mzg5MA%3D%3D/original/99417998-fa44-4c75-ae77-287c1468977b.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 4">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjI0NzUwMDUwMTg2Mzg5MA%3D%3D/original/e7843985-2cc0-4ae6-a528-babbbe8f5948.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjI0NzUwMDUwMTg2Mzg5MA%3D%3D/original/108249b2-6e2b-4dfd-abc4-f0d0da659959.png?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel10"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel10"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Go on tour with Feid</h5>
+                                        <p class="text-muted">Hosted by Feid</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 11 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel11" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyMzIwMTE1Njc3Njg0MTIzOQ%3D%3D/original/fb9dcb8d-7fa5-402f-91ae-fa2a26e9f097.png?im_w=960&im_q=highq" class="d-block w-100" alt="Image 7">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyMzIwMTE1Njc3Njg0MTIzOQ%3D%3D/original/1b9af44a-7179-4e2a-9db6-3c6c09b0609d.png?im_w=480&im_q=highq"
+                                                    class="d-block w-100" alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyMzIwMTE1Njc3Njg0MTIzOQ%3D%3D/original/90ec472f-9f0d-4d83-9696-c6699f4fe2fe.jpeg?im_w=480&im_q=highq"
+                                                    class="d-block w-100" alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel11"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel11"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Spend the night in the Ferrari Museum</h5>
+                                        <p class="text-muted">Hosted by Marc Gené</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Card 12 -->
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div id="carousel12" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/b16970cf-1d55-4edd-bb1f-e1735d0a228e.jpeg?im_w=960&im_q=highq" class="d-block w-100" alt="Image 10">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/58387bc5-15cf-4be7-bb18-56a9081326fb.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/c9a998fa-2f64-4576-a8e7-025cf2f08e66.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/d9520bdd-c46e-433d-a467-372a2157cb43.jpeg?im_w=480&im_q=highq" class="d-block w-100"
+                                                    alt="Image 5">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel12"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon small-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel12"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon small-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Shrek’s Swamp</h5>
+                                        <p class="text-muted">Hosted by Donkey</p>
+                                        <p class="fw-bold">Sold out <span class="text-muted fw-normal">total before
+                                                taxes</span></p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let homesBtn = document.getElementById("homes-btn");
+                let experiencesBtn = document.getElementById("experiences-btn");
+
+                homesBtn.addEventListener("click", function () {
+                    homesBtn.classList.add("fw-bold");
+                    experiencesBtn.classList.remove("fw-bold");
+                });
+
+                experiencesBtn.addEventListener("click", function () {
+                    experiencesBtn.classList.add("fw-bold");
+                    homesBtn.classList.remove("fw-bold");
+                });
+            });
+
+            function activate(element) {
+                document.querySelectorAll('.category-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                element.classList.add('active');
+            }
+
+            function scrollLeft() {
+                document.getElementById("category-scroll").scrollBy({ left: -200, behavior: 'smooth' });
+            }
+
+            function scrollRight() {
+                document.getElementById("category-scroll").scrollBy({ left: 200, behavior: 'smooth' });
+            }
+
+
+
+            
+    const scrollContainer = document.getElementById('category-scroll');
+    document.getElementById('scroll-left').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.category-item');
+    const currentPath = window.location.pathname.split("/").pop(); // get current page file like "icons.html"
+
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+
+        // Handle highlight on click
+        link.addEventListener("click", function () {
+            links.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+
+        // Skip dummy or empty links
+        if (!href || href === "#") return;
+
+        // Normalize href (remove ../ and get file name only)
+        const linkPage = href.split("/").pop();
+
+        // Match current page to link target
+        if (linkPage === currentPath) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

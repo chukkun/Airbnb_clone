@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb | Holiday rentals, cabins, beach houses & more</title>
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/dscfaxplh/image/upload/v1739788305/Airbnb/Airbnb%20logo/xyxrug5kbnw9bh36uhgv.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="logo mt-2 img-fluid d-none d-lg-block offset-2"
+                    src="https://res.cloudinary.com/dscfaxplh/image/upload/v1739789252/Airbnb/Airbnb%20logo/rngyonuu97ljzpfw4maa.jpg"
+                    alt="">
+                <img class="logoi mt-3 img-fluid d-lg-none d-md-block d-sm-block"
+                    src="https://res.cloudinary.com/dscfaxplh/image/upload/v1739868536/Airbnb/Airbnb%20logo/hzaqvukupaqac7n3roku.webp"
+                    alt="">
+            </div>
+            <div class="col-md-5">
+                <div class="col-md-7 position-absolute d-flex justify-content-start  offset-1  ">
+                    <div>
+                        <button class="btn btn-link text-dark  me-2 text-decoration-none fs-5 mt-3 g-0 fs--6 "
+                            id="homes-btn">Homes</button>
+                        <button class="btn btn-link text-dark  text-decoration-none fs-5 mt-3 g-0 fs--6"
+                            id="experiences-btn">Experiences</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex flex-container">
+                <h6 class=" text-dark py-2 px-3 rounded-pill d-inline-block hover-effect position-absolute  fs-6"
+                    style="top: 3%;">Airbnb your home</h6>
+                <h6 class="text-dark py-1 px-3 rounded-pill d-inline-block hover-effect  position-absolute fs-6"
+                    style="right: 10%; top: 3.7%;"><i class="fa-solid fa-globe "></i></h6>
+                <button
+                    class="btn btn-light rounded-pill px-1.5 py-2 d-flex align-items-center gap-2 dropdown-toggle position-absolute"
+                    style="right: 5%; top: 2.8%;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars fs-6" style="color: #6A6A6A;"></i>
+                    <i class="fa-solid fa-user-circle fs-4" style="color: #6A6A6A;"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"> Sign up </a></li>
+                    <li><a class="dropdown-item" href="#"> Login</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#">Airbnb your home</a></li>
+                    <li><a class="dropdown-item" href="#">Host an experience</a></li>
+                    <li><a class="dropdown-item" href="#"> Help center</a></li>
+                </ul>
+
+            </div>
+        </div>
+        </div>
+    </nav>
+
+</header>
+
+    
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+            <button id="scroll-left" class="scroll-button ">
+                <i class="fas fa-chevron-left small-ic"></i>
+            </button>
+            <div class="col-md-7 ms-5" >
+                <div class="d-flex flex-nowrap overflow-auto category-container offset-3" id="category-scroll" >
+                    <a href="./index.html" class="category-item " >
+                        <i class="fas fa-space-shuttle"></i> OMG!
+                    </a>
+                    <a href=".//pages/icons.html" class="category-item" >
+                        <i class="fas fa-ticket-alt"></i> Icons
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-water"></i> Lakefront
+                    </a>
+                    <a href="" class="category-item" >
+                        <i class="fas fa-home"></i> Cabins
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-tree"></i> Treehouses
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-mountain"></i> Caves
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-eye"></i> Amazing Views
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-tractor"></i> Farms
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-swimmer"></i> Amazing Pools
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-umbrella-beach"></i> Beachfront
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-tree"></i> Treehouses
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-mountain"></i> Caves
+                    </a>
+                    <a href="#" class="category-item" >
+                        <i class="fas fa-eye"></i> Amazing Views
+                    </a>
+                </div>
+                <button id="scroll-right" class="scroll-button right-arrow">
+                    <i class="fas fa-chevron-right small-ic"></i>
+                </button>
+            </div>
+
+
+            <div class="col-md-4 d-flex justify-content-end">
+
+                <!-- Filter & Toggle -->
+                <div class="d-flex align-items-center gap-3">
+                    <button class="filter-btn d-flex align-items-center">
+                        <i class="fas fa-sliders-h me-2"></i> Filters
+                    </button>
+                    <div class="toggle-switch d-flex rounded-3 px-3 py-2 align-items-center">
+                        Display total before taxes
+                        <div class="form-check form-switch ms-2">
+                            <input class="form-check-input" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-4">
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel1" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46130832/original/65de82db-e347-461e-a66b-5d15f16afbe3.jpeg?im_w=960"
+                                        class="d-block w-100" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46130832/original/bb1ec586-5032-4fed-aa87-9763166c7d5e.jpeg?im_w=720"
+                                        class="d-block w-100" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46130832/original/1437c489-f586-419b-b168-48ccd391ec69.jpeg?im_w=720"
+                                        class="d-block w-100" alt="Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon" ></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon" ></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Tambon Khao Hin Son, Thailand</h5>
+                            <p class="text-muted">2,289 kilometres away</p>
+                            <p class="text-muted">5 nights · 1–6 Apr</p>
+                            <p class="fw-bold">₹30,557 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel2" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA5NTQxNDc4NDM3MTkzODU2NQ%3D%3D/original/9ce4f044-3b5b-4fc0-9ec0-144d62669dc0.jpeg?im_w=960"
+                                        class="d-block w-100" alt="Image 4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA5NTQxNDc4NDM3MTkzODU2NQ%3D%3D/original/0c51ecfa-0564-4774-86e9-21d69800238a.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA5NTQxNDc4NDM3MTkzODU2NQ%3D%3D/original/85725ac4-e55c-41e2-9d2a-c0fa35914935.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Pigros Kallistis, Greece</h5>
+                            <p class="text-muted">6,020 kilometres away</p>
+                            <p class="text-muted">5 nights · 1–6 May</p>
+                            <p class="fw-bold">₹1,87,999 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel3" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/a143855f-c819-49db-b230-767b1fbb9073.jpg?im_w=1200"
+                                        class="d-block w-100" alt="Image 7">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/8b8393b9-941d-4c16-be72-2ebefcc228c5.jpg?im_w=1200"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-40579950/original/82ad5a19-36e0-4dd3-b4f8-fe7635e213f6.jpeg?im_w=1200"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Alliklepa, Estonia</h5>
+                            <p class="text-muted">6,894 kilometres away</p>
+                            <p class="text-muted">4 nights · 1–6 Apr</p>
+                            <p class="fw-bold">₹91,500 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel4" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/7cc3c855-f90e-4d0f-9b13-3b5c2a3c4bad.jpg?im_w=960"
+                                        class="d-block w-100" alt="Image 10">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/9833de62-35b7-41f2-8a24-0d9354150ea7.jpg?im_w=1200"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/91e6f52e-ed7c-40ca-8ea9-008ae47345e2.jpg?im_w=720"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/0af923a2-d755-47ba-8cb6-5f462d144015.jpg?im_w=720"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel4"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Balian Beach, Indonesia</h5>
+                            <p class="text-muted">4,520 kilometres away</p>
+                            <p class="text-muted">5 nights · 1–6 apr</p>
+                            <p class="fw-bold">₹43,561 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="container mt-4">
+            <div class="row g-4">
+                <!-- Card 5 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel5" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/4f70b681-a792-4530-8c52-f2a8d262942d.jpg?im_w=960"
+                                        class="d-block w-100" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4.jpg?im_w=720"
+                                        class="d-block w-100" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/4746f065-e12c-4af8-8e2a-0f295b4b1d8a.jpg?im_w=720"
+                                        class="d-block w-100" alt="Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel5"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Sidemen, Indonesia</h5>
+                            <p class="text-muted">4,563 kilometres away</p>
+                            <p class="text-muted">5 nights · 5–10 Apr</p>
+                            <p class="fw-bold">₹1,89,557 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel6" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/4a5c629b-9c92-450e-8d8f-995875798838.jpg?im_w=960"
+                                        class="d-block w-100" alt="Image 4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/0295e1cd-09fe-448a-b837-7bf5ade3809c.jpg?im_w=720"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/42c0bbcb-29e5-4064-adad-6382393dce0f.jpg?im_w=720"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel6"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel6"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Tampaksiring, Indonesia</h5>
+                            <p class="text-muted">4,549 kilometres away</p>
+                            <p class="text-muted">5 nights · 14–19 apr</p>
+                            <p class="fw-bold">₹1,43,999 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel7" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/6481d1e8-a4d9-4f24-99e7-efccefb9132d.jpg?im_w=960"
+                                        class="d-block w-100" alt="Image 7">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/734b61ab-19f7-4ab9-8cd7-d19b9b1d5a19.jpg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/93b9325a-549d-4fb0-924c-912aca4ba019.jpg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel7"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel7"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Tampaksiring, Indonesia</h5>
+                            <p class="text-muted">4,459 kilometres away</p>
+                            <p class="text-muted">5 nights · 19–24 apr</p>
+                            <p class="fw-bold">₹1,54,500 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card   8 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel8" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-944991643902274568/original/5781132a-1a78-4762-8f22-ecd151035623.jpeg?im_w=960"
+                                        class="d-block w-100" alt="Image 10">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-944991643902274568/original/4572e9ad-7921-48bc-81d5-8994efcf887e.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/fffa2cf7-bb7c-4c45-b09d-22e4d24016f3.jpg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-944991643902274568/original/6f1584f6-a66b-486d-ad7c-19fe095ae541.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel8"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel8"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Siloti Pant, India</h5>
+                            <p class="text-muted">1,808 kilometres away</p>
+                            <p class="text-muted">5 nights · 18–23 Jul</p>
+                            <p class="fw-bold">₹17,119 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container mt-4">
+            <div class="row g-4">
+                <!-- Card 9 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel9" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-601894455303485239/original/8081f63d-b342-4e82-8c29-5c173490422c.jpeg?im_w=960"
+                                        class="d-block w-100" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-601894455303485239/original/8daf43f0-3b63-4e8b-a5ba-f4510250f05f.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-601894455303485239/original/913769f8-98f7-42d4-92f2-236527f8245c.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel9"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel9"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Gumniska Mate, Poland</h5>
+                            <p class="text-muted">6,930 kilometres away</p>
+                            <p class="text-muted">5 nights · 1–6 Apr</p>
+                            <p class="fw-bold">₹1,80,268 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel10" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-45092774/original/a7f6222e-950e-4b77-85b4-034940b4a13d.jpeg?im_w=960"
+                                        class="d-block w-100" alt="Image 4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/miso/Hosting-45092774/original/2484dc62-f37f-4539-bdce-50cd9eff371a.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/miso/Hosting-45092774/original/d2c4f7c2-aebf-44c7-953f-1aa6c809e2ed.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel10"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel10"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Tagallalang, Indonesia</h5>
+                            <p class="text-muted">4,546 kilometres away</p>
+                            <p class="text-muted">5 nights · 3–8 May</p>
+                            <p class="fw-bold">₹86,971 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel11" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/9e13d2f9-d180-4f1c-aa3c-48cffad34c32.jpg?im_w=960"
+                                        class="d-block w-100" alt="Image 7">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTIxOTg3NzA2Mzg5MjAxMjEy/original/8de8a40f-2dcb-43fc-af86-c3c541657cd2.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/hosting/Hosting-921987706389201212/original/596ac615-77b0-438c-a9a6-f976c163a81d.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel11"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel11"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Ubud, Indonesia</h5>
+                            <p class="text-muted">4,552 kilometres away</p>
+                            <p class="text-muted">5 nights · 6–11 May</p>
+                            <p class="fw-bold">₹1,59,276 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div id="carousel12" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active ">
+                                    <img src="https://a0.muscache.com/im/pictures/ae37fdf0-440e-45b0-aae3-8c93a40d547f.jpg?im_w=960"
+                                        class="d-block w-100" alt="Image 10">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-50951229/original/8826ccc4-a795-46a4-8041-97e2ba552d68.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTA5NTEyMjk%3D/original/d2816b85-a067-48c8-9b49-c3c1b323eb41.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTA5NTEyMjk%3D/original/f997f0c4-85a8-4240-945e-a14cc6d4737c.jpeg?im_w=480"
+                                        class="d-block w-100" alt="Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel12"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon small-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel12"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon small-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Ghosta, Lebanon</h5>
+                            <p class="text-muted">5,054 kilometres away</p>
+                            <p class="text-muted">5 nights · 10–15 Jul</p>
+                            <p class="fw-bold">₹87,121 <span class="text-muted fw-normal">total before taxes</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let homesBtn = document.getElementById("homes-btn");
+                let experiencesBtn = document.getElementById("experiences-btn");
+
+                homesBtn.addEventListener("click", function () {
+                    homesBtn.classList.add("fw-bold");
+                    experiencesBtn.classList.remove("fw-bold");
+                });
+
+                experiencesBtn.addEventListener("click", function () {
+                    experiencesBtn.classList.add("fw-bold");
+                    homesBtn.classList.remove("fw-bold");
+                });
+            });
+
+            function activate(element) {
+                document.querySelectorAll('.category-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                element.classList.add('active');
+            }
+
+            function scrollLeft() {
+                document.getElementById("category-scroll").scrollBy({ left: -200, behavior: 'smooth' });
+            }
+
+            function scrollRight() {
+                document.getElementById("category-scroll").scrollBy({ left: 200, behavior: 'smooth' });
+            }
+
+
+
+            
+    const scrollContainer = document.getElementById('category-scroll');
+    document.getElementById('scroll-left').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.category-item');
+    const currentPath = window.location.pathname.split("/").pop(); // get current page file like "icons.html"
+
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+
+        // Handle highlight on click
+        link.addEventListener("click", function () {
+            links.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+
+        // Skip dummy or empty links
+        if (!href || href === "#") return;
+
+        // Normalize href (remove ../ and get file name only)
+        const linkPage = href.split("/").pop();
+
+        // Match current page to link target
+        if (linkPage === currentPath) {
+            link.classList.add("active");
+        }
+    });
+});
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
