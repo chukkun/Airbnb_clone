@@ -1,0 +1,68 @@
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.logo {
+    height: 60px;
+    width: 110px;
+
+}
+
+.logoi {
+    height: 60px;
+    width: 80px;
+    padding: 1px;
+}
+
+.hover-effect {
+    transition: background-color 0.3s ease;
+}
+
+.hover-effect:hover {
+    background-color: #e0e0e0 !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+ .villa-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .action-buttons {
+      gap: 10px;
+    }
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px 0 0 15px;
+    }
+    .sub-image {
+      width: 100%;
+      height: 195px;
+      object-fit: cover;
+    }
+    .sub-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      height: 100%;
+    }
+    .sub-images > div {
+      flex: 0 0 48%;
+    }
+    .price-box {
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    .rating-stars {
+      color: #ff5a5f;
+    }
